@@ -1,0 +1,206 @@
+
+:root {
+    --green: #00ff88;
+    --green-dim: rgba(0,255,136,0.07);
+    --green-glow: rgba(0,255,136,0.2);
+    --black: #070709;
+    --dark: #0d0d10;
+    --card: rgba(255,255,255,0.03);
+    --border: rgba(255,255,255,0.07);
+    --text: #eeeef2;
+    --muted: #444455;
+}
+
+*, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body {
+    background-color: var(--black);
+    background-image: 
+    linear-gradient(to right, var(--dark) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--dark) 1px, transparent 1px);
+    background-size: 4rem 4rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.navLinks a {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-decoration: none;
+    color: var(--muted);
+    font-family: "DM Mono", monospace;
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.navLinks a:hover {
+    color: var(--green);
+    transition: 0.2s;
+}
+
+.blur1 {
+    position: fixed;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(0,255,136,0.04) 0%, transparent 65%);
+    top: -200px; right: -200px;
+    pointer-events: none; z-index: 0;
+}
+
+.blur2 {
+    position: fixed;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(0,255,136,0.03) 0%, transparent 65%);
+    bottom: -100px; left: -100px;
+    pointer-events: none; z-index: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeUp 0.7s ease both;
+}
+
+.availableForProjects {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.statusIcon {
+    width: 7px; height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--green); }
+  50% { opacity: 0.5; box-shadow: 0 0 20px var(--green); }
+}
+
+.heroH1 {
+    color: var(--text);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.heroH1Green {
+    color: transparent;
+    -webkit-text-stroke: 2px #00ff88;
+}
+
+.heroH4 {
+    color: var(--muted);
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.8rem;
+}
+
+.heroH4Slash {
+    color: var(--green);
+}
+
+.heroP {
+    color: #777788;
+    font-family: "Barlow", sans-serif; 
+    margin-bottom: 5rem;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 1rem;
+}
+
+.heroButton1 {
+    clip-path: polygon(
+        0 0,
+        calc(100% - 12px) 0,
+        100% 12px,
+        100% 100%,
+        12px 100%,
+        0 calc(100% - 12px)
+    );
+    background-color: var(--green);
+    text-decoration: none;
+    color: var(--black);
+    padding: 1rem 2rem;
+    font-family: "DM Mono", monospace;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 0.2rem;
+    font-size: 0.7rem;
+}
+
+.heroButton1:hover {
+    transform: translateY(-5px);
+    transition: 0.2s;
+}
+
+.heroButton2 {
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--text);
+    padding: 1rem 2rem;
+    font-family: "DM Mono", monospace;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 0.2rem;
+    font-size: 0.7rem;
+    border: 0.1px solid var(--muted);
+}
+
+.heroButton2:hover {
+    border-color: var(--green);
+    color: var(--green);
+    transition: 0.2s;
+}
