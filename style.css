@@ -225,6 +225,10 @@ nav {
     align-items: center;
 }
 
+.projectsContainer {
+    width: clamp(30rem, 100%, 50rem);
+}
+
 .projectsSubtitleP {
     color: var(--green);
     font-family: "DM Mono", monospace;
@@ -243,8 +247,6 @@ nav {
 
 .projectCard {
     display: flex;
-    width: 100%;
-    max-width: 40rem;
     border-bottom: 1px solid var(--border);
     padding: 2rem 1rem;
     align-items: center;
@@ -317,7 +319,6 @@ nav {
     text-transform: uppercase;
     color: var(--green);
 }
-
 .aboutTitle {
     font-family: "Bebas Neue", sans-serif;
     font-size: 4rem;
@@ -345,16 +346,157 @@ nav {
 }
 
 .skillsBelt {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 5rem;
     width: max-content;
     animation: belt 15s linear infinite;
 }
 
 .skillsBelt img {
-    max-width: 5rem;
-    max-height: 5rem;
+    width: 10rem;
+    height: 10rem;
     object-fit: contain;
+    transition: 0.2s ease-in-out;
+    background-color: var(--green-dim);
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-block: 2rem;
+}
+
+.contactContent {
+    border: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: clamp(10rem, 100%, 60rem);
+}
+
+.contactLeft {
+    background-color: var(--dark);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+}
+
+.contactSubtitle {
+    color: var(--green);
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+}
+
+.contactTitle {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--text);
+    font-size: 2.5rem;
+    animation: fadeUp 0.7s ease both;
+    max-width: 8ch;
+    margin-bottom: 1rem;
+    line-height: 2.5rem;
+}
+
+.contactTitleGreen {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--green);
+}
+
+.contactP {
+    font-family: "DM Mono", monospace; 
+    font-size: 0.8rem;
+    color: var(--muted);
+    max-width: 30ch;
+    margin-bottom: 5rem;
+}
+
+.contactInfo {
+    margin-bottom: 2rem;
+}
+
+.contactInfoLabel {
+    font-family: "DM Mono", monospace;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 0.2rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+
+.contactInfoValue {
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    color: var(--text);
+    letter-spacing: 0.1rem;
+}
+
+.contactRight {
+    background-color: var(--green-dim);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm label {
+    font-family: "DM Mono";
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.contactForm input, textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1rem;
+    cursor: text;
+    color: var(--text);
+    height: 2rem;
+    padding: 1rem;
+}
+
+.contactForm input:focus, textarea:focus {
+    transition: 0.2s ease-in-out;
+    outline: none;
+    border-bottom: 1px solid var(--green);
+    border-left: 1px solid var(--green);
+}
+
+.contactButton {
+    clip-path: polygon(
+        0 0,
+        calc(100% - 12px) 0,
+        100% 12px,
+        100% 100%,
+        12px 100%,
+        0 calc(100% - 12px)
+    );
+    background-color: var(--green);
+    text-decoration: none;
+    color: var(--black);
+    padding: 1rem 2rem;
+    font-family: "DM Mono", monospace;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    font-size: 0.7rem;
+    border: none;
 }
 
 footer {
@@ -400,3 +542,4 @@ footer a:hover {
     border-color: var(--green-glow);
     transition: border-color ease-in-out 0.2s;
 }
+
