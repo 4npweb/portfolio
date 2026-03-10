@@ -5,6 +5,7 @@
     --green-glow: rgba(0,255,136,0.2);
     --black: #070709;
     --dark: #0d0d10;
+    --dark-trans: #0d0d10c7;
     --card: rgba(255,255,255,0.03);
     --border: rgba(255,255,255,0.07);
     --text: #eeeef2;
@@ -15,6 +16,7 @@
     box-sizing: border-box; 
     margin: 0; 
     padding: 0; 
+    cursor: crosshair
 }
 
 @keyframes fadeUp {
@@ -36,6 +38,7 @@ body {
 
 nav {
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     bottom: 0;
@@ -89,6 +92,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .hero {
@@ -133,27 +138,28 @@ nav {
 
 .heroH1Green {
     color: transparent;
-    -webkit-text-stroke: 2px #00ff88;
+    -webkit-text-stroke: 2px var(--green);
+
 }
 
-.heroH4 {
+.heroSubtitle {
     color: var(--muted);
     font-family: "DM Mono", monospace;
     font-weight: 400;
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 2rem;
 }
 
-.heroH4Slash {
+.heroSubtitleSlash {
     color: var(--green);
 }
 
 .heroP {
     color: #777788;
-    font-family: "Barlow", sans-serif; 
-    margin-bottom: 5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; 
+    margin-bottom: 4rem;
 }
 
 .heroButtons {
@@ -176,7 +182,7 @@ nav {
     padding: 1rem 2rem;
     font-family: "DM Mono", monospace;
     text-transform: uppercase;
-    font-weight: 550;
+    font-weight: 500;
     letter-spacing: 0.2rem;
     font-size: 0.7rem;
 }
@@ -193,7 +199,7 @@ nav {
     padding: 1rem 2rem;
     font-family: "DM Mono", monospace;
     text-transform: uppercase;
-    font-weight: 550;
+    font-weight: 500;
     letter-spacing: 0.2rem;
     font-size: 0.7rem;
     border: 0.1px solid var(--muted);
@@ -203,4 +209,85 @@ nav {
     border-color: var(--green);
     color: var(--green);
     transition: 0.2s;
+}
+
+.projects {
+    background-color: var(--dark-trans);
+    backdrop-filter: blur(1px);
+    padding-block: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectsSubtitleP {
+    color: var(--green);
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    animation: fadeUp 0.7s ease both;
+}
+
+.projectsTitleH1 {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--text);
+    font-size: 3rem;
+    animation: fadeUp 0.7s ease both;
+}
+
+.projectCard {
+    display: flex;
+    width: 30rem;
+    border-bottom: 1px solid var(--border);
+    padding: 2rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeUp 0.7s ease both;
+}
+
+.projectCard:hover {
+    background-color: var(--green-dim);
+    transition: 0.2s ease-in-out;
+}
+
+.projectCard:hover h2 {
+    color: var(--green)
+}
+
+.projectCard:hover .projectCardNum {
+    color: var(--green);
+}
+
+.projectCard:hover .projectCardArrow {
+    color: var(--green);
+}
+
+.projectCardNum {
+    font-family: "DM Mono", monospace;
+    font-size: 0.8rem;
+}
+
+.projectCard h2 {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--text);
+}
+
+.languageIcons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.projectCard p {
+    color: var(--muted);
+}
+
+.languageIcons p {
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    font-size: 0.6rem;
+    font-family: "DM Mono", monospace;
+    letter-spacing: 0.1rem;
+    padding: 0.25rem 0.5rem;
 }
