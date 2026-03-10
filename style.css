@@ -16,7 +16,11 @@
     box-sizing: border-box; 
     margin: 0; 
     padding: 0; 
-    cursor: crosshair
+    cursor: crosshair;
+}
+
+img {
+    max-width: 100%;
 }
 
 @keyframes fadeUp {
@@ -138,7 +142,7 @@ nav {
 
 .heroH1Green {
     color: transparent;
-    -webkit-text-stroke: 2px var(--green);
+    -webkit-text-stroke: 1px var(--green);
 
 }
 
@@ -290,4 +294,108 @@ nav {
     font-family: "DM Mono", monospace;
     letter-spacing: 0.1rem;
     padding: 0.25rem 0.5rem;
+}
+
+.about {
+    padding-block: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.aboutLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutSubtitle {
+    font-family: "DM Mono", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+.aboutTitle {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--text);
+    max-width: 8ch;
+}
+
+.aboutTitleGreen {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--green);
+}
+
+.aboutP {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+    max-width: 30ch;
+}
+
+.aboutRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skillsBelt {
+    display: flex;
+    gap: 5rem;
+    width: max-content;
+    animation: belt 15s linear infinite;
+}
+
+.skillsBelt img {
+    max-width: 5rem;
+    max-height: 5rem;
+    object-fit: contain;
+}
+
+footer {
+    background-color: var(--dark);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding-block: 3rem;
+    border-top: 1px solid var(--border);
+}
+
+footer h1 {
+    font-family: "DM Mono", monospace;
+    font-size: 3rem;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--green-dim);
+}
+
+footer p {
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.1rem;
+    max-width: 35ch;
+}
+
+footer a {
+    font-family: "DM Mono", monospace;
+    font-size: 0.6rem;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--green);
+    padding-right: 3rem;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+footer a:hover {
+    border-color: var(--green-glow);
+    transition: all ease-in-out 0.2s;
 }
