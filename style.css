@@ -243,7 +243,8 @@ nav {
 
 .projectCard {
     display: flex;
-    width: 30rem;
+    width: 100%;
+    max-width: 40rem;
     border-bottom: 1px solid var(--border);
     padding: 2rem 1rem;
     align-items: center;
@@ -310,7 +311,7 @@ nav {
 }
 
 .aboutSubtitle {
-    font-family: "DM Mono", sans-serif;
+    font-family: "DM Mono", monospace;
     font-size: 0.7rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
@@ -397,5 +398,5 @@ footer a {
 
 footer a:hover {
     border-color: var(--green-glow);
-    transition: all ease-in-out 0.2s;
+    transition: border-color ease-in-out 0.2s;
 }
