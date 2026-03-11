@@ -587,6 +587,7 @@ footer a:hover {
     .about {
         display: flex;
         flex-direction: column;
+        padding-inline: 2rem;
     }
 
     .aboutP {
@@ -635,6 +636,8 @@ footer a:hover {
 
     .skillsBelt img {
         padding: 2rem;
+        background: none;
+        border: none;
     }
 
     footer {
