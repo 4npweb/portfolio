@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="4NP Web — frontend developer.">
+    <meta name="author" content="4NP Web">
     <title>4NP Web | Web Development</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,8 +15,7 @@
     <div class="blur1"></div>
     <div class="blur2"></div>
 
-    <div class="content">
-
+    <div class="content"> 
         <!-- Header -->
         <header>
             <nav aria-label="Main Navigation">
@@ -22,7 +23,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#footer">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -35,13 +36,13 @@
                     Available for projects
                 </div>
 
-                <h1 class="heroTitle">Hi, <br><span class="heroTitleGreen">I'm 4NP.</span></h1>
-                <p class="heroSubtitle">Frontend Developer <span class="heroSubtitleSlash">/ </span>Web Designer</p>
-                <p class="heroP">I build websites that make people look using cleanly typed code. <br> Not templates.</p>
+                <h1 class="title">Hi, <br><span class="titleGreen">I'm 4NP.</span></h1>
+                <p class="heroSubtitle">Frontend Developer <span class="slash">/ </span>Web Designer</p>
+                <p class="paragraph">I build websites that make people look using cleanly typed code. <br> Not templates.</p>
 
                 <div class="heroButtons">
-                    <a href="#projects" class="heroButton1">View my work</a>
-                    <a href="#footer" class="heroButton2">Contact Me</a>
+                    <a href="#projects" class="button1">View my work</a>
+                    <a href="#contact" class="button2">Contact Me</a>
                 </div>
             </div>
         </section>
@@ -49,54 +50,13 @@
         <!-- Projects Section -->
         <section id="projects" class="projects">
             <div class="projectsContent">
-                <p class="projectsSubtitle">// See my work</p>
-                <h1 class="projectsTitle">Projects</h1>
+                <p class="subtitle">// See my work</p>
+                <h1 class="smallTitle">Projects</h1>
 
-                <div class="projectsGrid">
-                    <!-- <div class="projectCard">
-                        <p class="projectCardNum">01</p>
-                        <h2>Volt <br>Streetwear</h2>
-                        <div class="languageIcons">
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>JS</p>
-                        </div>
-                        <p class="projectCardArrow">↗</p>
+                <div class="projectsCarousel" id="projectsCaroudsel">
+                    <div class="projectsTrack" id="projectsTrack">
+                        <div class="projectCard"><a href="https://4npweb.github.io/bmi-calculator" target="_blank"><img src="img/bmiCalculator.png" alt=""></a></div>
                     </div>
-
-                    <div class="projectCard">
-                        <p class="projectCardNum">02</p>
-                        <h2>Volt <br>Streetwear</h2>
-                        <div class="languageIcons">
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>JS</p>
-                        </div>
-                        <p class="projectCardArrow">↗</p>
-                    </div>
-
-                    <div class="projectCard">
-                        <p class="projectCardNum">03</p>
-                        <h2>Volt <br>Streetwear</h2>
-                        <div class="languageIcons">
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>JS</p>
-                        </div>
-                        <p class="projectCardArrow">↗</p>
-                    </div>
-
-                    <div class="projectCard">
-                        <p class="projectCardNum">04</p>
-                        <h2>Volt <br>Streetwear</h2>
-                        <div class="languageIcons">
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>JS</p>
-                        </div>
-                        <p class="projectCardArrow">↗</p>
-                    </div> -->
-                    No projects for now!
                 </div>
             </div>
         </section>
@@ -105,21 +65,21 @@
         <section class="about" id="about">
             <div class="aboutContent">
                 <div class="aboutLeft">
-                    <p class="aboutSubtitle">// About me</p>
-                    <h1 class="aboutTitle">Building <span class="aboutTitleGreen">the web</span> one site at a time</h1>
-                    <p class="aboutP">
-                        I'm a self-taught developer. 
-                        I have 2+ years of experience 
-                        with web development. I have 
-                        great communication skills 
-                        and I'm ready to make you 
-                        satisfied with the finished 
+                    <p class="subtitle">// About me</p>
+                    <h1 class="title">Building <br><span class="titleGreen">the web</span><br> one site <br>at a time</h1>
+                    <p class="paragraph">
+                        I'm a self-taught developer. <br>
+                        I have 2+ years of experience <br>
+                        with web development. I have <br>
+                        great communication skills <br>
+                        and I'm ready to make you <br>
+                        satisfied with the finished <br>
                         product.
                     </p>
                 </div>
 
                 <div class="aboutRight">
-                    <div class="skillsBelt">
+                    <div class="skills">
                         <img src="img/htmlLogo.png" alt="HTML5 Logo">
                         <img src="img/cssLogo.png" alt="CSS Logo">
                         <img src="img/jsLogo.png" alt="JS Logo">
@@ -133,12 +93,12 @@
         <section id="contact" class="contact">
             <div class="contactContent">
                 <div class="contactLeft">
-                    <p class="contactSubtitle">// Get in touch</p>
-                    <h1 class="contactTitle">Let's <span class="contactTitleGreen">work</span> together</h1>
-                    <p class="contactP">
-                        Got a project in mind? 
-                        I'm available for freelance 
-                        work and open to new 
+                    <p class="subtitle">// Get in touch</p>
+                    <h1 class="smallTitle">Let's <br><span class="titleGreen">work</span><br> together</h1>
+                    <p class="paragraph">
+                        Got a project in mind? <br>
+                        I'm available for freelance <br> 
+                        work and open to new <br>
                         opportunities.
                     </p>
 
@@ -165,7 +125,7 @@
                 </div>
 
                 <div class="contactRight">
-                    <p class="contactRightSubtitle">// Message me</p>
+                    <p class="subtitle">// Message me</p>
 
                     <form class="contactForm" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="c8853188-b3f7-409f-8e57-53c952a6c256">

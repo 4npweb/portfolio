@@ -18,16 +18,17 @@
     cursor: crosshair;
 }
 
-a, button { cursor: pointer; }
-input, textarea { cursor: text; }
+a, button { 
+    cursor: pointer; 
+}
+
+input, textarea { 
+    cursor: text; 
+    resize: none
+}
 
 img {
     max-width: 100%;
-}
-
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
 }
 
 html { 
@@ -37,45 +38,9 @@ html {
 body {
     background-color: var(--black);
     background-image: 
-    linear-gradient(to right, var(--dark) 1px, transparent 2px),
-    linear-gradient(to bottom, var(--dark) 1px, transparent 2px);
+    linear-gradient(to right, var(--card) 1px, transparent 2px),
+    linear-gradient(to bottom, var(--card) 1px, transparent 2px);
     background-size: 4rem 4rem;
-}
-
-nav {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3rem;
-}
-
-.navLinks {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    list-style-type: none;
-}
-
-.navLinks a {
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    text-decoration: none;
-    color: var(--muted);
-    font-family: "DM Mono", monospace;
-    font-size: 0.6rem;
-    font-weight: 400;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
-}
-
-.navLinks a:hover {
-    color: var(--green);
-    transition: 0.2s;
 }
 
 .blur1 {
@@ -102,19 +67,54 @@ nav {
     z-index: 2;
 }
 
-/* ── Hero ── */
+/* Templates */
 
-.hero {
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.title {
+    color: var(--text);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.titleGreen {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--green);
+}
+
+.smallTitle {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--text);
+    font-size: 3rem;
     animation: fadeUp 0.7s ease both;
 }
 
-.heroContent {
-    display: flex;
-    flex-direction: column;
+.heroSubtitle {
+    color: var(--muted);
+    font-family: "DM Mono", monospace;
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    color: var(--green);
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    animation: fadeUp 0.7s ease both;
+}
+
+.paragraph {
+    color: #777788;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; 
+    margin-bottom: 4rem;
+}
+
+.slash {
+    color: var(--green);
 }
 
 .availableForProjects {
@@ -137,49 +137,7 @@ nav {
     animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--green); }
-  50% { opacity: 0.5; box-shadow: 0 0 20px var(--green); }
-}
-
-.heroTitle {
-    color: var(--text);
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 5rem;
-    margin-bottom: 1rem;
-}
-
-.heroTitleGreen {
-    color: transparent;
-    -webkit-text-stroke: 1px var(--green);
-}
-
-.heroSubtitle {
-    color: var(--muted);
-    font-family: "DM Mono", monospace;
-    font-weight: 400;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    margin-bottom: 2rem;
-}
-
-.heroSubtitleSlash {
-    color: var(--green);
-}
-
-.heroP {
-    color: #777788;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; 
-    margin-bottom: 4rem;
-}
-
-.heroButtons {
-    display: flex;
-    gap: 1rem;
-}
-
-.heroButton1 {
+.button1 {
     clip-path: polygon(
         0 0,
         calc(100% - 12px) 0,
@@ -199,12 +157,12 @@ nav {
     font-size: 0.7rem;
 }
 
-.heroButton1:hover {
+.button1:hover {
     transform: translateY(-5px);
     transition: 0.2s;
 }
 
-.heroButton2 {
+.button2 {
     text-decoration: none;
     color: var(--text);
     padding: 1rem 2rem;
@@ -216,11 +174,71 @@ nav {
     border: 0.1px solid var(--muted);
 }
 
-.heroButton2:hover {
+.button2:hover {
     border-color: var(--green);
     color: var(--green);
     transition: 0.2s;
 }
+
+/* Navigation */
+
+nav {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.navLinks a {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-decoration: none;
+    color: var(--text);
+    font-family: "DM Mono", monospace;
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.navLinks a:hover {
+    color: var(--green);
+    transition: 0.2s;
+}
+
+/* ── Hero ── */
+
+.hero {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeUp 0.7s ease both;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 1rem;
+}
+
 
 /* ── Projects ── */
 
@@ -238,74 +256,24 @@ nav {
     width: clamp(30rem, 100%, 50rem);
 }
 
-.projectsSubtitle {
-    color: var(--green);
-    font-family: "DM Mono", monospace;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    animation: fadeUp 0.7s ease both;
+.projectsCarousel {
+    position: relative;
+    overflow: hidden;
 }
 
-.projectsTitle {
-    font-family: "Bebas Neue", sans-serif;
-    color: var(--text);
-    font-size: 3rem;
-    animation: fadeUp 0.7s ease both;
+.projectsTrack {
+    display: flex;
+    transition: transform 0.35s cubic-bezier(.4,0,.2,1);
 }
 
 .projectCard {
-    display: flex;
-    border-bottom: 1px solid var(--border);
-    padding: 2rem 1rem;
-    align-items: center;
-    justify-content: space-between;
-    animation: fadeUp 0.7s ease both;
+    margin-top: 2rem;
+    min-width: 100%;
+    transition: transform 0.2s ease;
 }
 
 .projectCard:hover {
-    background-color: var(--green-dim);
-    transition: 0.2s ease-in-out;
-}
-
-.projectCard:hover h2 {
-    color: var(--green)
-}
-
-.projectCard:hover .projectCardNum {
-    color: var(--green);
-}
-
-.projectCard:hover .projectCardArrow {
-    color: var(--green);
-}
-
-.projectCardNum {
-    font-family: "DM Mono", monospace;
-    font-size: 0.8rem;
-}
-
-.projectCard h2 {
-    font-family: "Bebas Neue", sans-serif;
-    color: var(--text);
-}
-
-.languageIcons {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.projectCard p {
-    color: var(--muted);
-}
-
-.languageIcons p {
-    border-radius: 15px;
-    border: 1px solid var(--border);
-    font-size: 0.6rem;
-    font-family: "DM Mono", monospace;
-    letter-spacing: 0.1rem;
-    padding: 0.25rem 0.5rem;
+    transform: scale(1.1);
 }
 
 /* ── About ── */
@@ -326,59 +294,20 @@ nav {
     flex-direction: column;
 }
 
-.aboutSubtitle {
-    font-family: "DM Mono", monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
-    color: var(--green);
-}
-
-.aboutTitle {
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 4rem;
-    text-transform: uppercase;
-    color: var(--text);
-    max-width: 8ch;
-}
-
-.aboutTitleGreen {
-    color: transparent;
-    -webkit-text-stroke: 1px var(--green);
-}
-
-.aboutP {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-    font-size: 0.8rem;
-    color: var(--muted);
-    max-width: 30ch;
-}
-
-.linkHolder {
-    display: flex;
-    padding: 1rem 0rem;
-}
-
-.linkHolder img {
-    width: 2rem;
-    background-color: var(--green);
-    padding: 0.5rem;
-}
-
 .aboutRight {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.skillsBelt {
+.skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     width: max-content;
 }
 
-.skillsBelt img {
+.skills img {
     width: 10rem;
     height: 10rem;
     object-fit: contain;
@@ -389,7 +318,7 @@ nav {
     border-radius: 15px;
 }
 
-.skillsBelt img:hover {
+.skills img:hover {
     transform: scale(1.2);
 }
 
@@ -415,40 +344,19 @@ nav {
     border-right: 1px solid var(--border);
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     padding: 3rem 2rem;
 }
 
-.contactSubtitle {
-    color: var(--green);
-    font-family: "DM Mono", monospace;
-    font-weight: 400;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    margin-bottom: 2rem;
+.linkHolder {
+    display: flex;
+    padding: 1rem 0rem;
 }
 
-.contactTitle {
-    font-family: "Bebas Neue", sans-serif;
-    color: var(--text);
-    font-size: 2.5rem;
-    animation: fadeUp 0.7s ease both;
-    max-width: 8ch;
-    margin-bottom: 1rem;
-    line-height: 2.5rem;
-}
-
-.contactTitleGreen {
-    color: transparent;
-    -webkit-text-stroke: 1px var(--green);
-}
-
-.contactP {
-    font-family: "DM Mono", monospace; 
-    font-size: 0.8rem;
-    color: var(--muted);
-    max-width: 30ch;
-    margin-bottom: 5rem;
+.linkHolder img {
+    width: 2rem;
+    background-color: var(--green);
+    padding: 0.5rem;
 }
 
 .contactInfo {
@@ -475,17 +383,8 @@ nav {
     background-color: var(--green-dim);
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     padding: 3rem 2rem;
-}
-
-.contactRightSubtitle {
-    color: var(--green);
-    font-family: "DM Mono", monospace;
-    font-weight: 400;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    margin-bottom: 2rem;
 }
 
 .contactForm {
@@ -507,7 +406,6 @@ nav {
     border: none;
     border-bottom: 1px solid var(--border);
     margin-bottom: 1rem;
-    cursor: text;
     color: var(--text);
     height: 2rem;
     padding: 1rem;
@@ -518,7 +416,6 @@ nav {
     border: none;
     border-bottom: 1px solid var(--border);
     margin-bottom: 1rem;
-    cursor: text;
     color: var(--text);
     height: 6rem;
     padding: 1rem;
@@ -598,7 +495,20 @@ footer a:hover {
     transition: border-color ease-in-out 0.2s;
 }
 
-/* ── Responsive ── */
+/* Animations */
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--green); }
+    50% { opacity: 0.5; box-shadow: 0 0 20px var(--green); }
+}
+
+/* Responsive */
 
 @media (max-width: 1130px) {
     nav {
@@ -635,8 +545,16 @@ footer a:hover {
         padding-inline: 2rem;
     }
 
-    .aboutP {
-        max-width: 50ch;
+    .skills {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    .skills img {
+        background: none;
+        border: none;
+        width: 5rem;
+        height: 5rem;
     }
 
     .contactContent {
@@ -644,45 +562,14 @@ footer a:hover {
         grid-template-rows: 1fr 1fr;
         border: none;
     }
-
-    .contactLeft h1 {
-        font-size: 4rem;
-        line-height: 4rem;
-    }
-
+    
     .projectsContent {
         width: clamp(10rem, 100%, 50rem);
         padding-inline: 2rem;
-    }
-
-    .projectCard {
-        display: flex;
-        border-bottom: 1px solid var(--border);
-        padding: 2rem 1rem;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        animation: fadeUp 0.7s ease both;
-    }
-
-    .projectCard h2 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .skillsBelt {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 0.5rem;
-    }
-
-    .skillsBelt img {
-        background: none;
-        border: none;
-        width: 5rem;
-        height: 5rem;
     }
 
     footer {
         flex-direction: column;
     }
 }
+
