@@ -3,8 +3,9 @@
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    padding: 8rem 2rem;
+    padding: 0 2rem 5rem;
     background: url(../assets/contact_bg.png) no-repeat center;
+    scroll-margin-top: 8rem;
 }
 
 .contact-heading {
@@ -16,7 +17,8 @@
 }
 
 .contact-form {
-    background: var(--cyan-3);
+    background: var(--transparent);
+    border: 1px solid var(--cyan-3);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 3rem;
@@ -24,7 +26,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: 350px;
+    width: 100%;
     max-width: 480px;
 }
 
@@ -45,8 +47,8 @@
 .contact-form input,
 .contact-form textarea {
     background: none;
-    border: 0px solid black;
-    border-bottom: 1px solid var(--cyan-1);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-bottom: 1px solid var(--cyan-3);
     padding: 0.875rem 1rem;
     width: 100%;
     color: var(--white);
@@ -58,7 +60,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border: 1px solid var(--cyan-1);
+    border: 1px solid var(--cyan-3);
 }
 
 .contact-form textarea {
@@ -66,7 +68,7 @@
     resize: none;
 }
 
-.contact-btn-main {
+.contact-btn {
     background-color: var(--white);
     border: none;
     padding: 1rem;
@@ -81,7 +83,7 @@
 }
 
 @media(width > 600px) {
-    .contact-btn-main:hover {
+    .contact-btn:hover {
         background-color: var(--cyan-1);
     }
 } 

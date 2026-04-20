@@ -42,7 +42,8 @@ function Contact() {
             <motion.div
                 initial={{ transform: "translateY(100px)", opacity: 0 }}
                 whileInView={{ transform: "translateY(0px)", opacity: 1 }}
-                transition={{ duration: 0.6, ease: "easeInOut"}}>
+                transition={{ duration: 0.6, ease: "easeInOut"}}
+                viewport={{ once: true }}>
                 
                 <h2 className="contact-heading">What's next? You tell me!</h2>
             </motion.div>
@@ -62,7 +63,7 @@ function Contact() {
                     <label className="form-label" htmlFor="message">Your message:</label><br />
                     <textarea name="message" id="message" value={formData.message} onChange={handleChange} required/>
                 </div>
-                <button className="contact-btn-main" type="submit">Send</button>
+                <button className="contact-btn" type="submit">Send</button>
             </form>
         </section>
     )

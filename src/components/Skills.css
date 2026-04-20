@@ -53,12 +53,11 @@
     text-transform: uppercase;
     letter-spacing: 0.3rem;
     user-select: none;
-    flex: 1;
     display: block;
 }
 
 @media(width < 600px) {
-    .skills-container span {
+    .skill-container span {
         flex-direction: column;
 
     }

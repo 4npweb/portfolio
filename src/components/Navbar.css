@@ -1,4 +1,4 @@
-header {
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -8,7 +8,9 @@ header {
     width: 100%;
     top: 0;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: var(--transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -26,14 +28,14 @@ header {
 }
 
 .nav-links {
-    transition: 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .contact-link {
     border: 1px solid var(--white);
     border-radius: 30px;
     padding: 1rem 2rem;
-    transition: 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .menu-btn {
@@ -62,6 +64,7 @@ header {
     background: none;
     color: var(--black);
     cursor: pointer;
+    font-family: inherit;
 }
 
 .mobile-ul {
@@ -81,7 +84,6 @@ header {
     color: var(--black);
     border-radius: 30px;
     text-align: center;
-
     padding: 1rem 2rem;
     transition: 0.2s ease;
 }
@@ -118,7 +120,7 @@ header {
     .overlay {
         position: fixed;
         inset: 0;
-        background-color: rgba(0, 0, 0, 0.103);
+        background-color: rgba(0, 0, 0, 0.1);
         z-index: 998;
     }
 }

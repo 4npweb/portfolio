@@ -10,8 +10,8 @@ function Navbar() {
 
     return (
         <>
-            <header>
-                <a href="#hero"><img className="logo" src={logo} alt="" /></a>
+            <header className="navbar">
+                <a href="#hero"><img className="logo" src={logo} alt="4NP Logo" /></a>
                 
                 <ul className="desktop-ul">
                     <li><a className="nav-links" href="#about">About</a></li>
