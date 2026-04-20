@@ -1,7 +1,7 @@
 function WorkHeader() {
     return (
         <>
-            <header>
+            <header className="work-header">
                 <h1>Work</h1>
             </header>
         </>
