@@ -1,13 +1,14 @@
-import projects from "../data/projects"
-import ProjectCard from "./ProjectCard"
+import Project from "../components-work/ProjectCard"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 
 //Assets
-import "./RecentWork.css"
+import "./FeaturedWork.css"
+import projects from "../data/projects"
 
 function RecentWork() {
-    const featured = projects.filter(p => p.featured)
+
+    const featured = projects.filter(project => project.featured === true)
 
     return (
         <section className="recent-work">
@@ -17,12 +18,12 @@ function RecentWork() {
                 transition={{ duration: 0.6, ease: "easeInOut"}}
                 viewport={{ once: true }}>
                        
-                <h2 className="recent-work-heading">Recent Work</h2>
+                <h2 className="recent-work-heading">Featured Work</h2>
             </motion.div>
              
             <div className="recent-work-card-container">
-                {projects.map((project, i) => (
-                    <ProjectCard key={project.id} project={project} index={i} />
+                {featured.map((project, i) => (
+                    <Project key={project.id} project={project} index={i} />
                 ))}
             </div>
 

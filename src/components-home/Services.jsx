@@ -1,8 +1,8 @@
-import services from "../data/services"
 import Service from "./Service"
 
 //Assets
 import "./Services.css"
+import services from "../data/services"
 
 function Services() {
     return (

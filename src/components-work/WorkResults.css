@@ -1,0 +1,8 @@
+.work-results {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 8rem 3rem;
+    max-width: 1300px;
+    margin-inline: auto;
+}

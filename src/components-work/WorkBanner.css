@@ -1,0 +1,24 @@
+.page-heading {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../assets/work_bg.png") right center / auto 100% no-repeat;
+    background-size: cover;
+}
+
+.page-heading h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.work-banner-controls {
+    display: flex;
+    padding: 2rem;
+}
+
+@media (width < 600px) {
+}

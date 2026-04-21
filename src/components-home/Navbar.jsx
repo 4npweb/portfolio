@@ -34,7 +34,7 @@ function Navbar() {
                     <li><a onClick={() => setIsOpen(false)} className="menu-links" href="#about">About</a></li>
                     <li><Link onClick={() => setIsOpen(false)} className="menu-links" to="/work">Work</Link></li>
                     <li><a onClick={() => setIsOpen(false)} className="menu-links" href="#services">Services</a></li>
-                </ul>
+                </ul> 
 
                 <a onClick={() => setIsOpen(false)} className="menu-contact-link" href="#contact">Contact me</a>
             </div>

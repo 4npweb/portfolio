@@ -4,11 +4,14 @@ import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import App from './App.jsx'
+import { ScrollToTop } from './ScrollToTop.js'
 
 createRoot(document.getElementById('root')).render(
+  
   <StrictMode>
     <HelmetProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <App />
       </BrowserRouter>
     </HelmetProvider>

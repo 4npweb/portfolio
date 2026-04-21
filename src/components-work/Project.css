@@ -1,0 +1,91 @@
+.return-to-work {
+    padding: 2rem;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 2rem 2rem 5rem;
+    gap: 2rem;
+}
+
+.project-container-left {
+    display: flex;
+    justify-content: end;
+}
+
+.project-container-left img {
+    max-width: 100%;
+}
+
+.project-container-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-container-right h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.project-container-right p {
+    margin-bottom: 2rem;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.project-btn-1 {
+    background-color: var(--white);
+    width: 10em;
+    padding: 1rem;
+    text-align: center;
+    color: var(--black);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.project-btn-2 {
+    width: 10em;
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.lightbox {
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.829);
+    inset: 0;
+    padding: 5rem;
+    max-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-height: 70svh;
+}
+
+@media (width > 600px) {
+    .project-btn-1:hover {
+        background-color: var(--cyan-2);
+    }
+}
+
+@media (width < 920px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
