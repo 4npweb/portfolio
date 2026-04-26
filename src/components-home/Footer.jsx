@@ -44,7 +44,7 @@ function Footer() {
             </div>
 
             <p className="footer-bottom">
-                © 2026 4NP Web <br />
+                © 2026 4NP <br />
                 All rights reserved
             </p>
         </footer>
