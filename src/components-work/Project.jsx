@@ -18,11 +18,11 @@ function Project() {
     return (
         <>
             <Helmet>
-                <title>{project.title} | 4NP</title>
+                <title>4NP | Project</title>
                 <meta name="description" content={project.description} />
                 <link rel="canonical" href={`https://4np.dev/work/${project.id}`} />
             </Helmet>
-            
+
             <WorkNavbar />
 
             <main>
